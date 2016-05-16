@@ -1,0 +1,20 @@
+{
+  "books" : [
+    {
+      "title" : "1984",
+      "author" : "George Orwell",
+      "summary" : "..",
+      "genre" : "dystopian"
+    }
+  ],
+"authors" : [
+    {
+      "fullName" : "George Orwell",
+      "biography" : " Eric Arthur Blair, better known by his pen name George Orwell, was an English author and journalist."
+    },
+    {
+      "fullName" : "o'Genry",
+      "biography" : " ..."
+    }
+  ]
+}

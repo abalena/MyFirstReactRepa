@@ -18,6 +18,7 @@ module.exports = {
   ],
   module: {
     loaders: [
+      { test: /\.json$/, exclude: /node_modules/, loader: "json-loader"},
       {
         test: /\.js$/,
         loaders: [ 'babel' ],

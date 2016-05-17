@@ -1,7 +1,7 @@
 import React from "react"
 import {connect} from "react-redux"
-import {loadAllAuthors} from "../actions/authors"
 import {Link} from "react-router"
+import {loadAllAuthors} from "../actions/authors"
  class AllAuthors extends React.Component{
    componentWillMount(){
      this.props.loadAllAuthors()

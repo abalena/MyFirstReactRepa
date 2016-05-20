@@ -11,7 +11,7 @@ export default function authors(state = initialState, action) {
     case GET_ALL_AUTHORS_LIST : return Object.assign({}, state, {authors : libraryData.authors});
     case GET_AUTHOR_DETAIL :
       const author = libraryData.authors.find(function(author){
-        return author.fullName === action.name
+        return (author.fullName === action.name)
       })
       return Object.assign({}, state, {author})
     default:

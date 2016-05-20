@@ -3,7 +3,7 @@
     {
       "title" : "1984",
       "author" : "George Orwell",
-      "summary" : "something",
+      "summary" : "There should be book summary",
       "genre" : "dystopian"
     }
   ],
@@ -14,7 +14,7 @@
     },
     {
       "fullName" : "o'Genry",
-      "biography" : " ..."
+      "biography" : " biography"
     }
   ]
 }

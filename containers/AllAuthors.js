@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {Link} from "react-router"
 import {loadAllAuthors} from "../actions/authors"
+import {loadAllBooks} from "../actions/authors"
  class AllAuthors extends React.Component{
    componentWillMount(){
      this.props.loadAllAuthors()
@@ -10,7 +11,7 @@ import {loadAllAuthors} from "../actions/authors"
     const listOfAuthors = this.props.authors.map(function(author){
       return(
         <li>
-          <Link to={"/author/"+author.fullName}>{author.fullName}</Link>
+              <Link to={"/author/"+author.fullName}>{author.fullName}</Link>
         </li>
       )
     })

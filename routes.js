@@ -6,6 +6,7 @@ import AuthorDetails from './containers/AuthorDetails'
 import InputBox from './components/InputBox.js'
 import AllAuthors from './containers/AllAuthors.js'
 import AllBooks from './containers/AllBooks.js'
+import AllGenres from './containers/AllGenres.js'
 export default (
   <Route path="/" component={App}>
     <Route path = "/test"
@@ -18,6 +19,8 @@ export default (
       component={AllAuthors}/>
     <Route path="/books"
       component={AllBooks}/>
+    <Route path="/genres"
+      component={AllGenres}/>
   </Route>
 
 )

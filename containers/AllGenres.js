@@ -2,7 +2,6 @@ import React from "react"
 import {connect} from "react-redux"
 import {Link} from "react-router"
 import {loadAllBooks} from "../actions/books.js"
-import {loadAllGenres} from "../actions/genres"
 class AllGenres extends React.Component {
   componentWillMount(){
     this.props.loadAllBooks()
@@ -29,4 +28,4 @@ function mapStateToProps(state){
     books : state.books.books
   };
 }
-export default connect(mapStateToProps, {loadAllGenres})(AllGenres)
+export default connect(mapStateToProps, {loadAllBooks})(AllGenres)

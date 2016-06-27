@@ -2,17 +2,21 @@ import React from "react"
 import {connect} from "react-redux"
 import {Link} from "react-router"
 import {loadAllBooks} from "../actions/books.js"
-import {loadAllGenres} from "../actions/genres.js"
+import {loadAllGenres} from "../actions/genres"
 class AllGenres extends React.Component {
   componentWillMount(){
-    this.props.loadAllGenres()
+    this.props.loadAllBooks()
   }
   render(){
     const listOfGenres = this.props.books.map(function(book){
       return(
-        <span> {book.genre} </span>
+        <div>
+          <li>
+            {book.genre}
+          </li>
+        </div>
       )
-    })
+  })
     return(
       <ul>
         {listOfGenres}

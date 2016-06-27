@@ -4,7 +4,6 @@ import {Link} from "react-router"
 import {loadAllBooks} from "../actions/books.js"
 import {loadAllAuthors} from "../actions/authors.js"
 import {loadAuthorDetail} from "../actions/authors.js"
-import AuthorDetails from './AuthorDetails.js'
 class AllBooks extends React.Component {
   componentWillMount(){
     this.props.loadAllBooks()
@@ -14,16 +13,18 @@ class AllBooks extends React.Component {
       return(
         <ul>
            <Link to={"/book/" + book.title}>{book.title}</Link>
-             <td> - </td>
+           <td> - </td>
            <Link to ={"/author/" + book.author}>{book.author}</Link>
+           <td> - </td>
+           <Link to={"/genres"}>{book.genre}</Link>
          </ul>
         )
       })
-  return(
+   return(
     <ul>
       {listOfBooks}
     </ul>
-   )
+    )
   }
 }
 function mapStateToProps(state){

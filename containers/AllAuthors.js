@@ -11,7 +11,7 @@ class AllAuthors extends React.Component{
       return(
         <div>
           <li>
-            <Link to = {"author/" + author.fullName}>{author.fullName}</Link>
+            <Link to = {`author/${author.fullName}`}>{author.fullName}</Link>
           </li>
         </div>
       )

@@ -12,11 +12,11 @@ class AllBooks extends React.Component {
     const listOfBooks = this.props.books.map(function(book){
       return(
         <ul>
-           <Link to={"/book/" + book.title}>{book.title}</Link>
+           <Link to={`/book/${book.title}`}>{book.title}</Link>
            <td> - </td>
-           <Link to ={"/author/" + book.author}>{book.author}</Link>
+           <Link to ={`/author/${book.author}`}>{book.author}</Link>
            <td> - </td>
-           <Link to={"/genres"}>{book.genre}</Link>
+           <Link to={`/genres`}>{book.genre}</Link>
          </ul>
         )
       })

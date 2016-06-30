@@ -7,15 +7,15 @@ class AllGenres extends React.Component {
     this.props.loadAllBooks()
   }
   render(){
-    const listOfGenres = this.props.books.map(function(book){
-      return(
+    const listOfGenres = this.props.books.map(book=>
+      (
         <div>
           <li>
             {book.genre}
           </li>
         </div>
       )
-  })
+  )
     return(
       <ul>
         {listOfGenres}

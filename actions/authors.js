@@ -4,5 +4,5 @@ export function loadAllAuthors () {
 }
 export const GET_AUTHOR_DETAIL = 'GET_AUTHOR_DETAIL';
 export function loadAuthorDetail(name){
-  return {type:GET_AUTHOR_DETAIL, }
+  return {type:GET_AUTHOR_DETAIL, name}
 }

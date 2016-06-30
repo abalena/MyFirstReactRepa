@@ -14,7 +14,6 @@ export default function authors(state = initialState, action) {
         return (author.fullName === action.name)
       })
       return Object.assign({}, state, {author})
-    default:
-    return state;
+    default : return state;
   }
 }

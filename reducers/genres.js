@@ -8,7 +8,6 @@ const initialState = {
 export default function genres(state = initialState, action){
   switch (action.type){
     case GET_ALL_BOOKS_LIST : return Object.assign({}, state, {genres : libraryData.books});
-    default:
-    return state;
+    default : return state;
   }
 }

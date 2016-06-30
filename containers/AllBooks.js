@@ -9,8 +9,8 @@ class AllBooks extends React.Component {
     this.props.loadAllBooks()
   }
   render(){
-    const listOfBooks = this.props.books.map(function(book){
-      return(
+    const listOfBooks = this.props.books.map(book=>
+      (
         <ul>
            <Link to={`/book/${book.title}`}>{book.title}</Link>
            <td> - </td>
@@ -19,7 +19,7 @@ class AllBooks extends React.Component {
            <Link to={`/genres`}>{book.genre}</Link>
          </ul>
         )
-      })
+      )
    return(
     <ul>
       {listOfBooks}

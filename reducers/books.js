@@ -13,7 +13,6 @@ export default function books(state = initialState, action){
       return book.title === action.name
     })
     return Object.assign({}, state, {book})
-    default:
-    return state;
+    default : return state;
   }
 }

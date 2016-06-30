@@ -7,15 +7,15 @@ class AllAuthors extends React.Component{
     this.props.loadAllAuthors()
   }
   render(){
-    const listOfAuthors = this.props.authors.map(function(author){
-      return(
+    const listOfAuthors = this.props.authors.map(author=>
+      (
         <div>
           <li>
             <Link to = {`author/${author.fullName}`}>{author.fullName}</Link>
           </li>
         </div>
       )
-    })
+    )
     return(
       <ul>
         {listOfAuthors}

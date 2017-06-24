@@ -8,7 +8,10 @@ export default class AuthorDetails extends React.Component {
  }
   render() {
     return (
-      <div>{this.props.authorDetails.biography}</div>
+      <div>
+        <div>{this.props.authorDetails.fullName}</div>
+        <div>{this.props.authorDetails.biography}</div>
+      </div>
     );
   }
 }

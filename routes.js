@@ -5,7 +5,7 @@ import BookDetails from './containers/BookDetails.js'
 import AuthorDetails from './containers/AuthorDetails'
 import AllAuthors from './containers/AllAuthors.js'
 import AllBooks from './containers/AllBooks.js'
-import AllGenres from './containers/AllGenres.js'
+import Genre from './containers/Genre.js'
 export default (
   <Route path="/" component={App}>
     <Route path="/book/:name"
@@ -17,7 +17,7 @@ export default (
     <Route path="/books"
       component={AllBooks}/>
     <Route path="/genres"
-      component={AllGenres}/>
+      component={Genre}/>
   </Route>
 
 )

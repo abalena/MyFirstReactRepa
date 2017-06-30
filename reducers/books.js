@@ -9,9 +9,9 @@ export default function books(state = initialState, action){
   switch (action.type){
     case GET_ALL_BOOKS_LIST : return Object.assign({}, state, {books : libraryData.books});
     case GET_BOOK_DETAIL :
-    const book = libraryData.books.find(function(book){
-      return book.title === action.name
-    })
+    const book = libraryData.books.find(book  =>
+      (book.title === action.name)
+    )
     return Object.assign({}, state, {book})
     default : return state;
   }

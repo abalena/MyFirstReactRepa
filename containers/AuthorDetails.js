@@ -5,11 +5,12 @@ export default class AuthorDetails extends React.Component {
  componentWillMount(){
    const authorName = this.props.routeParams.name;
    this.props.loadAuthorDetail(authorName)
- }
+}
+
   render() {
     return (
       <div>
-        <div>{this.props.authorDetails.fullName}</div>
+        <h3>{this.props.authorDetails.fullName}</h3>
         <div>{this.props.authorDetails.biography}</div>
       </div>
     );

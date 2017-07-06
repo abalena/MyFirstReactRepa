@@ -3,7 +3,7 @@ import {connect} from "react-redux"
 import {Link} from "react-router"
 import {loadAllBooks} from "../actions/books.js"
 class AllBooks extends React.Component {
-  componentWillMount(){
+  componentDidMount(){
     this.props.loadAllBooks()
   }
   render(){

@@ -3,23 +3,16 @@ import {connect} from "react-redux"
 import {Link} from "react-router"
 import {loadAllBooks} from "../actions/books.js"
 class Genre extends React.Component {
-
-  componentWillMount(){
-    this.props.loadAllBooks()
+  componentDidMount(){
+    const booksByGenre = this.props.routeParams.name;
+    this.props.loadAllBooks(booksByGenre)
   }
-
   render(){
-    const listOfBooksByGenres = this.props.books.map(function(book){
-      if(book.genre == "dystopian")
-    return  (
-        <div>
-          {book.title}
-        </div>
-      )}
+    const listOfBooksByGenre = this.props.books.map(book=>
+      ( book.genre && <div>{book.title}</div> )
   )
-
     return(
-          <div>{listOfBooksByGenres}</div>
+          <div>{listOfBooksByGenre}</div>
     )
   }
 }

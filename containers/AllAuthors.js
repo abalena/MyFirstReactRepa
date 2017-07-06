@@ -8,11 +8,10 @@ class AllAuthors extends React.Component{
     this.state = {isOpened: false};
   }
 
-  toggleState(){
-    this.setState({isOpened: !this.state.isOpened})
-  }
+  toggleState(){ this.setState({isOpened: !this.state.isOpened})}
 
-  componentWillMount(){
+
+  componentDidMount(){
     this.props.loadAllAuthors();
   }
 
@@ -26,10 +25,9 @@ class AllAuthors extends React.Component{
       </div>
     )
 
-   let dropdownText;
-   if(this.state.isOpened){
-     dropdownText = <div>{listOfAuthors}</div>
-   }
+   let dropdownText ;
+   dropdownText = this.state.isOpened ? <div>{listOfAuthors}</div> : <div> </div>;
+   //this.state.isOpened && (dropdownText = <div>{listOfAuthors}</div>);
 
    return(
      <div>

@@ -5,14 +5,19 @@ import rootReducer from '../reducers'
 import DevTools from '../containers/DevTools'
 
 export default function configureStore(initialState) {
-  const store = createStore(
-    rootReducer,
-    initialState,
-    compose(
+  const isProduction = process.env.NODE_ENV === 'production';
+  let store;
+  if (isProduction) {
+    store = createStore(
+      rootReducer,
+      initialState);
+  }else{
+    const enhancer = compose(
       applyMiddleware(thunk, createLogger()),
       DevTools.instrument()
-    )
-  )
+    );
+    store = createStore(rootReducer, initialState, enhancer)
+  }
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

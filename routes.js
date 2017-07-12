@@ -16,7 +16,7 @@ export default (
       component={AllAuthors}/>
     <Route path="/books"
       component={AllBooks}/>
-    <Route path="/genres"
+    <Route path="/genre/:name"
       component={Genre}/>
   </Route>
 

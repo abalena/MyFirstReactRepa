@@ -1,8 +1,9 @@
 var path = require('path')
 var webpack = require('webpack')
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: NODE_ENV == 'development' ? 'cheap-module-source-map' : 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
     './index'
@@ -14,14 +15,19 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env' : {
+        NODE_ENV : JSON.stringify(NODE_ENV)
+    }
+    })
   ],
   module: {
     loaders: [
       { test: /\.json$/, exclude: /node_modules/, loader: "json-loader"},
       {
-        test: /\.js$/,
-        loaders: [ 'babel' ],
+        test: /\.jsx?$/,
+        loader: 'babel',
         exclude: /node_modules/,
         include: __dirname
       }

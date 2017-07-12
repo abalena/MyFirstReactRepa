@@ -1,12 +1,12 @@
 import React from "react";
 import {connect} from "react-redux";
 import {loadAuthorDetail} from "../actions/authors";
+
 export default class AuthorDetails extends React.Component {
  componentDidMount(){
    const authorName = this.props.routeParams.name;
    this.props.loadAuthorDetail(authorName)
 }
-
   render() {
     return (
       <div>
@@ -16,6 +16,7 @@ export default class AuthorDetails extends React.Component {
     );
   }
 }
+
 function mapStateToProps(state){
   return{
     authorDetails: state.authors.author

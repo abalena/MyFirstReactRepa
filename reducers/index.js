@@ -3,10 +3,10 @@ import { combineReducers } from 'redux';
 
 import authors from './authors';
 import books from './books';
-import genres from './genres';
+import genre from './genre';
 
 const rootReducer = combineReducers(
-  {routing: routerReducer, authors, books, genres}
+  {routing: routerReducer, authors, books, genre}
 );
 
 export default rootReducer;

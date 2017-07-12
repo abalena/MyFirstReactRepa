@@ -2,7 +2,8 @@ import React from "react"
 import {connect} from "react-redux"
 import {Link} from "react-router"
 import {loadAllBooks} from "../actions/books.js"
-class AllBooks extends React.Component {
+
+export default class AllBooks extends React.Component {
   componentDidMount(){
     this.props.loadAllBooks()
   }
@@ -15,7 +16,7 @@ class AllBooks extends React.Component {
            <td> - </td>
            <Link to ={`/author/${book.author}`}>{book.author}</Link>
            <td> - </td>
-           <Link to={`/genres`}>{book.genre}</Link>
+           <Link to={`/genre/${book.genre}`}>{book.genre}</Link>
          </span>
        </div>
         )

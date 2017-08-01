@@ -3,6 +3,7 @@ var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
 var config = require('./webpack.config')
 var api = require('./middleware/api')
+var library = require('./data/library');
 
 var app = new (require('express'))()
 var port = 3005
@@ -12,6 +13,12 @@ app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output
 app.use(webpackHotMiddleware(compiler))
 
 app.get('/api/test', api.test);
+app.get('/api/authors', function(req, res){
+  return res.json(library.authors)
+})
+app.get('/api/books', function(req, res){
+  return res.json(library.books)
+})
 
 app.use(function(req, res) {
   res.sendFile(__dirname + '/index.html')

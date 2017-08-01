@@ -1,3 +1,3 @@
 module.exports.test = function (req, res) {
-  res.sendFile({hello: 'world'})
+  res.json({hello: 'world'})
 };

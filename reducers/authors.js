@@ -3,7 +3,7 @@ console.log(libraryData)
 import {GET_ALL_AUTHORS_LIST, GET_AUTHOR_DETAIL} from "../actions/authors.js"
 const initialState = {
   authors: [],
-  authorId: {}
+  author: {}
 };
 
 export default function authors(state = initialState, action) {

@@ -1,4 +1,5 @@
 # MyFirstReactRepa
+Install Node.js
 After cloning the repository, install dependencies:
 npm install
 

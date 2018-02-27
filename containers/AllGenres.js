@@ -2,7 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {Link} from "react-router"
 import {loadAllBooks} from "../actions/books.js"
-class AllGenres extends React.Component {
+AllGenres extends React.Component {
   componentWillMount(){
     this.props.loadAllBooks()
   }

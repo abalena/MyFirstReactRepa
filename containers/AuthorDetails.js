@@ -1,8 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {loadAuthorDetail} from "../actions/authors";
-
-export default class AuthorDetails extends React.Component {
+class AuthorDetails extends React.Component {
  componentDidMount(){
    const authorName = this.props.routeParams.name;
    this.props.loadAuthorDetail(authorName)

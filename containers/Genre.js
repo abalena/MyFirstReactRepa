@@ -2,8 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {Link} from "react-router"
 import {loadAllBooks} from "../actions/books.js"
-
-export default class Genre extends React.Component {
+class Genre extends React.Component {
   componentDidMount(){
     this.props.loadAllBooks()
   }

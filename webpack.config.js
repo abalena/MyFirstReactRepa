@@ -14,7 +14,6 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env' : {
@@ -24,10 +23,9 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.json$/, exclude: /node_modules/, loader: "json-loader"},
       {
         test: /\.jsx?$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/,
         include: __dirname
       }

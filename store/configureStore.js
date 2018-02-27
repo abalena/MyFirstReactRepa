@@ -1,8 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux'
+import logger from 'redux-logger'
 import thunk from 'redux-thunk'
-import createLogger from 'redux-logger'
+import {createLogger} from 'redux-logger'
 import rootReducer from '../reducers'
 import DevTools from '../containers/DevTools'
+
 
 export default function configureStore(initialState) {
   const isProduction = process.env.NODE_ENV === 'production';

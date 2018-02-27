@@ -2,7 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {Link} from "react-router"
 import {loadAllAuthors} from "../actions/authors"
-export default class AllAuthors extends React.Component{
+class AllAuthors extends React.Component{
   constructor(props){
     super(props);
     this.state = {isOpened: false};

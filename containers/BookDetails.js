@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router";
 import {connect} from "react-redux";
 import {loadBookDetail} from "../actions/books";
-export default class BookDetails extends React.Component {
+class BookDetails extends React.Component {
   componentDidMount(){
     const bookTitle = this.props.routeParams.name;
     this.props.loadBookDetail(bookTitle)
